@@ -44,6 +44,8 @@ let todos = [];
 const registerForm = document.querySelector(".registerForm");
 const loginForm = document.querySelector(".loginForm");
 const logoutButton = document.querySelector(".logoutbtn-popup");
+const todologoutbtn = document.querySelector(".todologoutbtn");
+
 //todo
 const todoInput = document.querySelector(".todo-input");
 const todoList = document.querySelector(".todo-list");
@@ -87,8 +89,26 @@ if (loginForm) {
     }
   });
 }
+
 if (logoutButton) {
   logoutButton.addEventListener("click", () => {
+    currentUser = null;
+    todos = [];
+    todoInput.value = "";
+    todoList.innerHTML = "";
+    window.location.href = "index.html";
+    function preventBack() {
+      window.history.forward();
+    }
+    setTimeout("preventBack()", 0);
+    window.onunload = function () {
+      null;
+    };
+    console.log("logout");
+  });
+}
+if (todologoutbtn) {
+  todologoutbtn.addEventListener("click", () => {
     currentUser = null;
     todos = [];
     todoInput.value = "";
