@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login | registration form</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h2 class="logo">Logo</h2>
+      <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Contact</a>
+        <button class="loginbtn-popup">Login</button>
+        <button class="logoutbtn-popup">Log Out</button>
+      </nav>
+    </header>
+    <div class="wrapper active">
+      <span class="close"><ion-icon name="close"></ion-icon></span>
+      <div class="form-box register">
+        <h2>Register</h2>
+        <form action="#" class="registerForm">
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="person"></ion-icon>
+            </span>
+            <label for="username">Username</label>
+            <input id="s-username" type="text" required />
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <label for="email">Email</label>
+            <input id="s-email" type="email" required />
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <label for="password">Password</label>
+            <input id="s-password" type="password" required />
+          </div>
+          <div class="remember-forgot">
+            <label
+              ><input type="checkbox" />I agree to the terms & conditions</label
+            >
+          </div>
+          <input type="submit" class="btn" value="Register" />
+          <!-- <button  class="btn register-btn" onclick=toLogin()>Register</button> -->
+          <div class="register-Login">
+            <p>
+              Already have an account?<a href="#" class="login-link">Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="form-box login">
+        <h2>Login</h2>
+        <form class="loginForm" id="loginForm">
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <label for="email">Email</label>
+            <input id="l-email" type="email" required />
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <label for="password">Password</label>
+            <input id="l-password" type="password" required />
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox" />Remember Me</label>
+            <a href="#">Forgot Password ?</a>
+          </div>
+          <input type="submit" class="btn" value="Login" />
+          <!-- <button type="submit" class="btn">Login</button> -->
+          <div class="Login-register">
+            <p>
+              Don't have an account?<a href="#" class="register-link"
+                >Register</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="todo-wrapper">
+      <h1>Todo List</h1>
+      <div class="todo-option">
+        <input
+          type="text"
+          class="todo-input"
+          id="todo-input"
+          placeholder="write your Todo here"
+        />
+        <button class="add-todo" id="add-todo">Add</button>
+      </div>
+      <div class="todo-list-wrapper">
+        <ul class="todo-list" id="todo-list"></ul>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script type="text/javascript">
+      function preventBack() {
+        window.history.forward();
+      }
+      setTimeout("preventBack()", 0);
+      window.onunload = function () {
+        null;
+      };
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
